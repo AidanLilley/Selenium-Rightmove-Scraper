@@ -1,0 +1,47 @@
+CREATE DATABASE scraperdb;
+
+\c scraperdb
+
+CREATE TABLE buy_data_new (
+    address character varchar(400),
+    postcode character varchar(15),
+    price integer,
+    housetype character varchar(150),
+    numofbeds int,
+    numofbaths int,
+    instances int,
+    PRIMARY KEY (address, postcode, price, housetype, numofbeds, numofbaths)
+);
+
+CREATE TABLE buy_data_historical (
+    address character varchar(400),
+    postcode character varchar(15),
+    price integer,
+    housetype character varchar(150),
+    numofbeds int,
+    numofbaths int,
+    instances int,
+    PRIMARY KEY (address, postcode, price, housetype, numofbeds, numofbaths)
+);
+
+CREATE TABLE rent_data_new (
+    address character varchar(400),
+    postcode character varchar(15),
+    price integer,
+    housetype character varchar(150),
+    numofbeds int,
+    numofbaths int,
+    instances int,
+    PRIMARY KEY (address, postcode, price, housetype, numofbeds, numofbaths)
+);
+
+CREATE TABLE rent_data_historical (
+    address character varchar(400),
+    postcode character varchar(15),
+    price integer,
+    housetype character varchar(150),
+    numofbeds int,
+    numofbaths int,
+    instances int,
+    PRIMARY KEY (address, postcode, price, housetype, numofbeds, numofbaths)
+);
